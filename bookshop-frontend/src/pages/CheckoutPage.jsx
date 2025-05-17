@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("en-US", {
@@ -21,8 +22,18 @@ const CheckoutPage = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [orderError, setOrderError] = useState(null);
-
+  const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
+    // Check for successful payment
+    const query = new URLSearchParams(location.search);
+    if (query.get("success") === "true") {
+      // Clear cart and redirect to homepage
+      localStorage.removeItem("cart");
+      setCart([]);
+      navigate("/", { replace: true });
+    }
+
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(storedCart);
   }, []);
