@@ -50,7 +50,7 @@ const HomePage = () => {
       {/* Header with title and buttons */}
       <header className="max-w-7xl mx-auto flex justify-between items-center mb-10">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 select-none">
-          📚 Bookshop
+          📚 SkillZen-BookStore
         </h1>
         <nav className="space-x-4">
           <Link
@@ -64,6 +64,13 @@ const HomePage = () => {
             className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition"
           >
             My Orders
+          </Link>
+
+          <Link
+              to="/admin"
+              className="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition"
+          >
+            Add Books
           </Link>
         </nav>
       </header>
