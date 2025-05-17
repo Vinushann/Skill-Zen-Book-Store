@@ -50,7 +50,7 @@ const HomePage = () => {
       {/* Header with title and buttons */}
       <header className="max-w-7xl mx-auto flex justify-between items-center mb-10">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 select-none">
-          📚 Bookshop
+          📚 SkillZen-BookStore
         </h1>
         <nav className="space-x-4">
           <Link
