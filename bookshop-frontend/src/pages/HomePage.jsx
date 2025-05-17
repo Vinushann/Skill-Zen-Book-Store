@@ -65,6 +65,13 @@ const HomePage = () => {
           >
             My Orders
           </Link>
+
+          <Link
+              to="/admin"
+              className="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition"
+          >
+            Add Books
+          </Link>
         </nav>
       </header>
 
